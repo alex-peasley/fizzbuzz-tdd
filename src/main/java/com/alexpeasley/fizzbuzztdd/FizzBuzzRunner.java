@@ -11,4 +11,10 @@ public class FizzBuzzRunner {
     public FizzBuzzRunner(FizzBuzzConverter fizzBuzzConverter) {
         this.fizzBuzzConverter = fizzBuzzConverter;
     }
+
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(fizzBuzzConverter.convert(i));
+        }
+    }
 }
