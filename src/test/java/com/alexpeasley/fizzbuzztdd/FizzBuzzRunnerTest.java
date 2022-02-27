@@ -5,9 +5,11 @@ import com.alexpeasley.fizzbuzztdd.model.FizzBuzzTddProperties;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.util.StringUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,5 +46,8 @@ class FizzBuzzRunnerTest {
         FizzBuzzRunner fizzBuzzRunner = new FizzBuzzRunner(converter);
         fizzBuzzRunner.run();
         String out = outContent.toString();
+        assertEquals(33, StringUtils.countOccurrencesOf(out, "Fizz"));
+        assertEquals(20, StringUtils.countOccurrencesOf(out, "Buzz"));
+        assertEquals(6, StringUtils.countOccurrencesOf(out, "FizzBuzz"));
     }
 }
