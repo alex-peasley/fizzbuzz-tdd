@@ -1,7 +1,11 @@
 package com.alexpeasley.fizzbuzztdd.converter;
 
 import com.alexpeasley.fizzbuzztdd.model.FizzBuzzProperties;
+import lombok.Getter;
+import org.springframework.stereotype.Component;
 
+@Component
+@Getter
 public class FizzBuzzConverter {
     private FizzBuzzProperties properties;
 
