@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class FizzBuzzRunner {
 
-    public FizzBuzzRunner(FizzBuzzConverter converter) {
+    private FizzBuzzConverter fizzBuzzConverter;
+
+    public FizzBuzzRunner(FizzBuzzConverter fizzBuzzConverter) {
+        this.fizzBuzzConverter = fizzBuzzConverter;
     }
 }

@@ -42,6 +42,7 @@ class FizzBuzzRunnerTest {
         properties.setBuzz(5);
         FizzBuzzConverter converter = new FizzBuzzConverter(properties);
         FizzBuzzRunner fizzBuzzRunner = new FizzBuzzRunner(converter);
-
+        fizzBuzzRunner.run();
+        String out = outContent.toString();
     }
 }
