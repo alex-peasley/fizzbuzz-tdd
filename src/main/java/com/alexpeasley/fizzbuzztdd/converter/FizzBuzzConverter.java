@@ -1,6 +1,7 @@
 package com.alexpeasley.fizzbuzztdd.converter;
 
 import com.alexpeasley.fizzbuzztdd.model.FizzBuzzTddProperties;
+import org.springframework.util.StringUtils;
 
 public class FizzBuzzConverter {
     private FizzBuzzTddProperties properties;
@@ -10,12 +11,15 @@ public class FizzBuzzConverter {
     }
 
     public String convert(int i) {
-        String fizzBuzzConvertedString = "";
-        if (i % properties.getFizz() == 0) {
-            fizzBuzzConvertedString += "Fizz";
+        String fizzBuzzConvertedString = String.valueOf(i);
+        if (i % (properties.getFizz() * properties.getBuzz()) == 0) {
+            fizzBuzzConvertedString = "FizzBuzz";
         }
-        if (i % properties.getBuzz() == 0) {
-            fizzBuzzConvertedString += "Buzz";
+        else if (i % properties.getFizz() == 0) {
+            fizzBuzzConvertedString = "Fizz";
+        }
+        else if (i % properties.getBuzz() == 0) {
+            fizzBuzzConvertedString = "Buzz";
         }
         return fizzBuzzConvertedString;
     }
