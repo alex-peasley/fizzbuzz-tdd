@@ -19,22 +19,31 @@ class FizzBuzzConverterTest {
 
     @Test
     void testMultipleOf3Fizz() {
-        for (int i = 3; i <= 100; i+=3) {
-            assertEquals("Fizz", fizzBuzzConverter.convert(i));
-        }
+        assertEquals("Fizz", fizzBuzzConverter.convert(3));
+        assertEquals("Fizz", fizzBuzzConverter.convert(6));
+        assertEquals("Fizz", fizzBuzzConverter.convert(9));
+        assertEquals("Fizz", fizzBuzzConverter.convert(18));
+        assertEquals("Fizz", fizzBuzzConverter.convert(33));
+        assertEquals("Fizz", fizzBuzzConverter.convert(36));
+        assertEquals("Fizz", fizzBuzzConverter.convert(39));
     }
 
     @Test
     void testMultipleOf5Buzz() {
-        for (int i = 5; i <= 100; i+=5) {
-            assertEquals("Buzz", fizzBuzzConverter.convert(i));
-        }
+        assertEquals("Buzz", fizzBuzzConverter.convert(5));
+        assertEquals("Buzz", fizzBuzzConverter.convert(10));
+        assertEquals("Buzz", fizzBuzzConverter.convert(20));
+        assertEquals("Buzz", fizzBuzzConverter.convert(25));
+        assertEquals("Buzz", fizzBuzzConverter.convert(85));
+        assertEquals("Buzz", fizzBuzzConverter.convert(95));
     }
 
     @Test
     void testMultipleOf15FizzBuzz() {
-        for (int i = 15; i <= 100; i+=15) {
-            assertEquals("FizzBuzz", fizzBuzzConverter.convert(i));
-        }
+        assertEquals("FizzBuzz", fizzBuzzConverter.convert(15));
+        assertEquals("FizzBuzz", fizzBuzzConverter.convert(30));
+        assertEquals("FizzBuzz", fizzBuzzConverter.convert(45));
+        assertEquals("FizzBuzz", fizzBuzzConverter.convert(60));
+        assertEquals("FizzBuzz", fizzBuzzConverter.convert(90));
     }
 }

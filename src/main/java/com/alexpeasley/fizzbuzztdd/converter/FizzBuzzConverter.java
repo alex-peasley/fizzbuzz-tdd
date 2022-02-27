@@ -14,6 +14,9 @@ public class FizzBuzzConverter {
         if (i % properties.getFizz() == 0) {
             fizzBuzzConvertedString += "Fizz";
         }
+        if (i % properties.getBuzz() == 0) {
+            fizzBuzzConvertedString += "Buzz";
+        }
         return fizzBuzzConvertedString;
     }
 }
