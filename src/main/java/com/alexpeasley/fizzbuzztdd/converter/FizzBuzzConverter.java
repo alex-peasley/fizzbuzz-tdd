@@ -1,12 +1,11 @@
 package com.alexpeasley.fizzbuzztdd.converter;
 
-import com.alexpeasley.fizzbuzztdd.model.FizzBuzzTddProperties;
-import org.springframework.util.StringUtils;
+import com.alexpeasley.fizzbuzztdd.model.FizzBuzzProperties;
 
 public class FizzBuzzConverter {
-    private FizzBuzzTddProperties properties;
+    private FizzBuzzProperties properties;
 
-    public FizzBuzzConverter(FizzBuzzTddProperties properties) {
+    public FizzBuzzConverter(FizzBuzzProperties properties) {
         this.properties = properties;
     }
 
