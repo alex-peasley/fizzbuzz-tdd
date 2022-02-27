@@ -1,7 +1,7 @@
 package com.alexpeasley.fizzbuzztdd;
 
 import com.alexpeasley.fizzbuzztdd.converter.FizzBuzzConverter;
-import com.alexpeasley.fizzbuzztdd.model.FizzBuzzTddProperties;
+import com.alexpeasley.fizzbuzztdd.model.FizzBuzzProperties;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,6 @@ import org.springframework.util.StringUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.Locale;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -39,7 +38,7 @@ class FizzBuzzRunnerTest {
 
     @Test
     void testFizzBuzzRunner() {
-        FizzBuzzTddProperties properties = new FizzBuzzTddProperties();
+        FizzBuzzProperties properties = new FizzBuzzProperties();
         properties.setFizz(3);
         properties.setBuzz(5);
         FizzBuzzConverter converter = new FizzBuzzConverter(properties);

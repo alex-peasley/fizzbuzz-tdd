@@ -1,6 +1,6 @@
 package com.alexpeasley.fizzbuzztdd.converter;
 
-import com.alexpeasley.fizzbuzztdd.model.FizzBuzzTddProperties;
+import com.alexpeasley.fizzbuzztdd.model.FizzBuzzProperties;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class FizzBuzzConverterTest {
 
     @BeforeEach
     void setUp() {
-        FizzBuzzTddProperties properties = new FizzBuzzTddProperties();
+        FizzBuzzProperties properties = new FizzBuzzProperties();
         properties.setFizz(3);
         properties.setBuzz(5);
         fizzBuzzConverter = new FizzBuzzConverter(properties);
