@@ -15,13 +15,15 @@ public class FizzBuzzConverter {
 
     public String convert(int i) {
         String fizzBuzzConvertedString = String.valueOf(i);
-        if (i % (properties.getFizz() * properties.getBuzz()) == 0) {
+        int fizz = properties.getFizz();
+        int buzz = properties.getBuzz();
+        if (i % (fizz * buzz) == 0) {
             fizzBuzzConvertedString = "FizzBuzz";
         }
-        else if (i % properties.getFizz() == 0) {
+        else if (i % fizz == 0) {
             fizzBuzzConvertedString = "Fizz";
         }
-        else if (i % properties.getBuzz() == 0) {
+        else if (i % buzz == 0) {
             fizzBuzzConvertedString = "Buzz";
         }
         return fizzBuzzConvertedString;
